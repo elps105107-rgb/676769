@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#f7f7f7;
+      color:#111;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* Header */
+    header{
+      width:100%;
+      padding:30px 80px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:100;
+      background:rgba(255,255,255,0.75);
+      backdrop-filter:blur(10px);
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:700;
+      letter-spacing:2px;
+    }
+
+    nav a{
+      margin-left:30px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#ff9800;
+    }
+
+    /* Hero */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:120px 10%;
+      gap:80px;
+    }
+
+    .hero-image img{
+      width:420px;
+      max-width:100%;
+      border-radius:30px;
+      object-fit:cover;
+      box-shadow:0 20px 40px rgba(0,0,0,0.12);
+      transition:0.4s;
+    }
+
+    .hero-image img:hover{
+      transform:translateY(-10px);
+    }
+
+    .hero-content{
+      max-width:520px;
+    }
+
+    .hero-content h1{
+      font-size:72px;
+      line-height:1.05;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .hero-content h1 span{
+      color:#ff9800;
+    }
+
+    .hero-content p{
+      color:#666;
+      line-height:1.8;
+      margin-bottom:35px;
+      font-size:16px;
+    }
+
+    .btn-group{
+      display:flex;
+      gap:20px;
+    }
+
+    .btn{
+      padding:14px 32px;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn-primary{
+      background:#111;
+      color:#fff;
+    }
+
+    .btn-primary:hover{
+      background:#ff9800;
+    }
+
+    .btn-outline{
+      border:2px solid #111;
+    }
+
+    .btn-outline:hover{
+      background:#111;
+      color:#fff;
+    }
+
+    /* Side Dots */
+    .side-dots{
+      position:fixed;
+      right:40px;
+      top:50%;
+      transform:translateY(-50%);
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .side-dots span{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:#ccc;
+      transition:0.3s;
+    }
+
+    .side-dots span.active{
+      background:#111;
+      transform:scale(1.4);
+    }
+
+    /* Footer */
+    footer{
+      text-align:center;
+      padding:40px;
+      color:#777;
+      font-size:14px;
+    }
+
+    /* Responsive */
+    @media(max-width:900px){
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+        gap:50px;
+      }
+
+      .hero-content h1{
+        font-size:48px;
+      }
+
+      .btn-group{
+        justify-content:center;
+      }
+
+      header{
+        padding:25px 30px;
+      }
+
+      nav{
+        display:none;
+      }
+
+      .side-dots{
+        display:none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">YUQING</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+
+    <!-- 左側照片 -->
+    <div class="hero-image">
+      <!-- 將你的照片命名為 me.jpg -->
+      <img src="me.jpg" alt="My Photo">
+    </div>
+
+    <!-- 右側文字 -->
+    <div class="hero-content">
+      <h1>
+        Who's a <br>
+        <span>Creative</span> Mind?
+      </h1>
+
+      <p>
+        嗨，我是于晴。<br>
+        這是一個簡約風格的個人作品網站，
+        用來展示我的作品與個人資訊。
+      </p>
+
+      <div class="btn-group">
+        <!-- 下載作品 PDF -->
+        <a href="work.pdf" class="btn btn-primary" target="_blank">
+          View Work
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+          Contact Me
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 側邊裝飾點 -->
+  <div class="side-dots">
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 YuQing Portfolio. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
